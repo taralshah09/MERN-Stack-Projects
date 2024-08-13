@@ -1,35 +1,27 @@
-import express from "express"
+import express from "express";
 import mongoose from "mongoose";
-import Book from "./models/booksModel.js"
+import Book from "./models/booksModel.js";
+import router from "./routes/booksRouter.js";
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
-
-app.get("/",(req,res)=>{
-    res.status(200).send({message : "Hello world"})
-})
-
+app.use(express.urlencoded({ extended: true }));
 
 //--------------------------------------------------
-// 1. Get books api
-app.get("/books",(req,res)=>{
-    return Book.find();
-})
-
-
+// Setting up the RESTful API for the backend
+app.use("/books",router)
 //--------------------------------------------------
-
 
 // Connecting the server with mongoDB database
+mongoose
+  .connect(
+    "mongodb+srv://root:root@cluster0.cbgoe.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.error("Failed to connect to MongoDB", err));
 
-
-mongoose.connect('mongodb+srv://root:root@books-store-mern.r5v4p.mongodb.net/?retryWrites=true&w=majority&appName=Books-Store-MERN', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-})
-
-.then(() => console.log('Connected to MongoDB'))
-.catch((err) => console.error('Failed to connect to MongoDB', err));
-
-app.listen(5555,()=>console.log("Server running on PORT : 5555"))
+app.listen(5555, () => console.log("Server running on PORT : 5555"));
