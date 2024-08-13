@@ -2,10 +2,13 @@ import express from "express";
 import mongoose from "mongoose";
 import Book from "./models/booksModel.js";
 import router from "./routes/booksRouter.js";
+import cors from "cors"
+
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors())
 
 //--------------------------------------------------
 // Setting up the RESTful API for the backend

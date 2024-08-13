@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.top-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px;
+}
+.fa-plus {
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.fa-plus:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+}
+table {
+  width: 98%;
+  margin: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+th {
+  padding: 15px;
+  border: 1px solid;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  border: 1px solid black;
+  font-size: 20px;
+  background: rgb(73, 136, 224);
+}
+td {
+  padding: 15px;
+  border: 1px solid;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* BackToHome  */
+.back-home-arrow {
+  padding: 15px;
+  font-size: 20px;
+  color: rgb(73, 136, 224);
+}
+
+/* CreateBookPage */
+.create-book-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.create-book-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.create-book-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgb(73, 136, 224);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: rgb(73, 106, 224);
+}
+
+/* GetBookPage */
+.details-box {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+.details-box h2{
+  color: rgb(73, 136, 224);
+}
+.details-box h4 {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  color: rgb(73, 136, 224);
+
+}
+
+.details-box .box {
+  /* margin-bottom: 15px; */
+  display: flex;
+  margin-top: 15px;
+}
+
+.details-box .box span {
+  display: inline-block;
+  margin-left: 10px;
+  font-family: Arial, sans-serif;
+  color: #555;
+}
+
+/* DeleteBookPage */
+.delete-box{
+  width: 400px;
+  /* height: 120px; */
+  border-radius: 5px;
+  margin: 25px auto;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+.delete-box button{
+  width: 100%;
+  margin-top: 15px;
+  background: red;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 5px;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.delete-box button:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}
